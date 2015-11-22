@@ -1,0 +1,98 @@
+﻿@using EventiWebAPI.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<article>
+    <!--<header>
+        <hgroup class="title">
+            <h3>Accesso Utente</h3>
+        </hgroup>
+    </header>
+        -->
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-7">
+                    <h3>Accesso con Password</h3>
+                    <section id="loginForm">
+                        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="input-group col-md-6">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Username" })
+                            </div>
+                            <span class="help-block">@Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })</span>
+                            <div class="input-group col-md-6">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                            </div>
+
+                            <span class="help-block">@Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })</span>
+                            <div class="input-group col-md-6">
+                                <input id="RememberMe" name="RememberMe" type="checkbox" value="" title="Mantieni l'accesso" />
+                                <label for="RememberMe">&nbsp;Ricordami</label>
+                            </div>
+                            <div class="input-group col-md-6">
+                                <input type="submit" value="Log in" class="btn btn-primary col-md-12" />
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+
+                                </div>
+                            </div>
+                            @*
+                                       <p>
+                            Non hai un account? @Html.ActionLink("Registrati!", "Register")
+                        </p>
+
+                                             Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+                        }
+                    </section>
+
+                </div>
+                <div class="col-md-5">
+              
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <!-- Responsive Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-0764416938183246"
+                 data-ad-slot="2510351007"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

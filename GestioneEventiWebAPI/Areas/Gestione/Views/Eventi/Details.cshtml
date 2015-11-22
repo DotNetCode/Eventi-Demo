@@ -1,0 +1,90 @@
+﻿@model EventiWebAPI.Models.Evento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrizione)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescrizioneBreve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescrizioneBreve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPosti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPosti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlImmagine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlImmagine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inizio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inizio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fine)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdEvento }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
